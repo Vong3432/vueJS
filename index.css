@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Merriweather');
+
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+*{
+    transition: 300ms ease-in-out;
+}
+
+body
+{
+    background-color: #353535;
+}
+
+p{
+    font-size: 1.3em;
+}
+
+.top-nav
+{   
+    background-color:#24252a;
+    padding: 5px;      
+    width: 100%;
+    position: fixed;    
+    position: -webkit-fixed;     
+    top: 0;
+    left: 0;
+
+    display: flex; 
+    display:-webkit-flex;           
+
+    justify-content: center;
+    -ms-flex-flow: row wrap;        
+    flex-flow: row wrap;
+
+    z-index: 99;
+    /* box-shadow: 0px 3px 7px 0px gray; */
+    
+}
+
+.top-nav a
+{
+    text-decoration: none;
+    font-size: 1.8em;
+    padding: 20px;
+    text-align: center;   
+    font-family: 'Josefin Slab', serif;
+}
+
+.menBtn-components a
+{
+    display: block;
+}
+
+.page-container
+{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.hero-container
+{    
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;    
+    margin-top: 200px;
+    width: 100%;
+    min-height: 60vh;      
+}
+
+.hero-container img
+{
+    border-radius: 50%;
+    max-width: 200px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero--content
+{
+        
+    max-width: 700px;
+    max-height: 500px;
+    width: 100%;    
+    height: auto;
+    text-align: center;
+    padding: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: 1.6;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    box-shadow: 0px 15px 0px 0px white;
+}
+
+.hero--content h2{
+    font-size: 3.3em;
+}
+
+@media screen and (max-width:900px)
+{
+    .page-container
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .hero--content
+    {
+        margin-left: -3%;
+        margin-right: -3%;
+    }
+    
+}
