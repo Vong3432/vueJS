@@ -9,12 +9,33 @@
 </head>
 <body>
 
-<div id="app">    
-    <navbar></navbar>
-    <div class="page-container">        
-        <hero></hero>
+<ul class="top-nav">
+    <a href="#" id="active">Home</a>
+    <a href="#">About us</a>
+    <a href="#">For him</a>
+    <a href="#">For her</a>
+</ul>
+
+<div id="app">
+    <div class="page-container">
+        <section class="hero-container">
+            <div class="hero--image">
+                <img src="watches.svg">
+            </div>
+            <div class="hero--content">
+                <h1>Welcome to Watches.co</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>   
+
+            <div class="hero--content">
+                    <h1 style="border-bottom:none;background-color:black;color:white;text-align:center">Category</h1>  
+                    <input type="text" placeholder="Enter brand name...">                  
+            </div>  
+            <product></product>
+        </section>
     </div>
 </div>
+
 <div style="height:1000px"></div>
 <script src="https://unpkg.com/vue"></script>
 <script src="index.js"></script>

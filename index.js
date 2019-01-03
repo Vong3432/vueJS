@@ -1,90 +1,35 @@
-Vue.component('navbar',{
+Vue.component('product',{
     template:`
-        <div>
-            <ul class="top-nav">
-                <a v-for="item in items" :href="item.links"> {{ item.name }} </a>        
-                <span class="menBtn-components" @mouseover="displayItem">
-                    <a>Men</a>
-                    <men-btn v-show="isHover === true"></men-btn>
-                </span>
-            </ul>
-        </div>
-    `,
-    data() {
-        return {
-            items:[
-                {
-                    name: 'Home',
-                    links: 'index.html'
-                },
-                {
-                    name: 'About us',
-                    links: 'about.html'
-                }
-            ],
-            isHover:false
-        }
-    },
-    methods: {
-        displayItem(){
-
-        }
-    },
-})
-
-Vue.component('men-btn',{
-
-    template:`
-            <span>
-                <a 
-                    v-for="item in menItems" 
-                    :href="item.links"                               
-                    >
-                    {{ item.name }}
-                </a>
-            </span>
-    `,
-    data() {
-        return {
-            menItems:[
-            {                
-                name:'Casio',
-                link:'#'
-            },
-            {                
-                name:'Daniel Wellington',
-                link:'#'
-            },
-            {                
-                name:'...',
-                link:'#'
-            }
-        ]
-        }
-    },
-})
-
-Vue.component('hero',{
-    template:`
-        <div>
-            <div class="hero-container">    
-                <div>
-                    <img :src="image" :alt="imageText"/>         
-                </div>
-                <div class="hero--content">
-                    <h2>Watches.Co</h2>
-                    <p>Watches.Co is a website that provides variety of watches for everyone.
-                       Our goal is to let everyone can find their favourite watches and calculate
-                       the correct price before dealing.
-                    </p>
+            <div>
+                <div class="category" v-for="i in category" :key="i.id">
+                    <h2> {{ i.name }}</h2>            
+                    <img :src="i.image">
+                    <p>{{ i.description }}</p>
                 </div>
             </div>
-        </div>
     `,
     data() {
         return {
-            image:'logo.jpg',
-            imageText:"watches-logo"     
+            category:[
+                {
+                    id: 0001,
+                    name: 'Casio',
+                    image: 'casio.jpg',
+                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                },
+                {
+                    id: 0002,
+                    name: 'Daniel Wellington',
+                    image: 'dw.jpg',
+                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                },
+                {
+                    id: 0003,
+                    name: 'Tissot',
+                    image: 'tissot.jpg',
+                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                }
+            ]
         }
     },
 })
@@ -100,11 +45,17 @@ $(window).scroll(function(){
     if( wScroll >= 200)
     {
         $('.top-nav').css("background-color","white")
-        $('.top-nav a').css("color","black")
+        $('.top-nav a').css("color","black")        
+        $('.men-btn a').css("color","black")                 
+        $('.top-nav a').css("border-bottom","2px solid white")         
+        $('#active').css("border-bottom","2px solid #353535")               
     }
     else{
         $('.top-nav').css("background-color","#24252a")
-        $('.top-nav a').css("color","white")
+        $('.top-nav a').css("color","white")           
+        $('.top-nav a').css("border-bottom","2px solid #353535")    
+        $('.men-btn a').css("color","white")
+        $('#active').css("border-bottom","2px solid white") 
     }
     wPosition = wScroll;
 });
