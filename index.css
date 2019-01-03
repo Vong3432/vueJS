@@ -176,8 +176,8 @@ p{
 {    
     margin: 0 10px;
     font-size: 1.3em;    
-    outline: none;
-    border-style: none;
+    outline: none;    
+    border: none;
     border-bottom: 2px solid gray;
     padding: 20px 10px;    
     max-width: 200px;
