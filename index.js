@@ -1,35 +1,55 @@
+class Category {
+    constructor(id, name, image, description) {
+      this.id = id;
+      this.name = name;
+      this.image = image;
+      this.description = description;
+    }
+}
+
 Vue.component('product',{
     template:`
             <div>
-                <div class="category" v-for="i in category" :key="i.id">
+                <div class="search-container">
+                 <input v-model="search" class="search" type="text" placeholder="Enter brand name..."/>                             
+                </div>                
+                <div class="category" v-for="i in filteredList">
                     <h2> {{ i.name }}</h2>            
                     <img :src="i.image">
                     <p>{{ i.description }}</p>
-                </div>
+                </div>                
             </div>
     `,
     data() {
         return {
-            category:[
-                {
-                    id: 0001,
-                    name: 'Casio',
-                    image: 'casio.jpg',
-                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-                },
-                {
-                    id: 0002,
-                    name: 'Daniel Wellington',
-                    image: 'dw.jpg',
-                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-                },
-                {
-                    id: 0003,
-                    name: 'Tissot',
-                    image: 'tissot.jpg',
-                    description: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
-                }
+            search:'',
+            categoryList:[
+                new Category(
+                    0001,
+                   'Casio',
+                    'casio.jpg',
+                    'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                ),
+                new Category(
+                    0002,
+                    'Daniel Wellington',
+                    'dw.jpg',
+                    'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                ),
+                new Category(
+                    0003,
+                    'Tissot',
+                    'tissot.jpg',
+                    'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+                )
             ]
+        }
+    },
+    computed: {
+        filteredList(){
+            return this.categoryList.filter(i => {
+                return i.name.toLowerCase().includes(this.search.toLowerCase())
+            })
         }
     },
 })
@@ -39,10 +59,15 @@ var app = new Vue({
 })
 
 // JavaScript and Jquery
-var wPosition = 200;
+var wPosition = 0;
 $(window).scroll(function(){
+    changeNav();
+});
+
+function changeNav()
+{
     var wScroll = $(window).scrollTop();
-    if( wScroll >= 200)
+    if( wScroll >= wPosition)
     {
         $('.top-nav').css("background-color","white")
         $('.top-nav a').css("color","black")        
@@ -53,9 +78,9 @@ $(window).scroll(function(){
     else{
         $('.top-nav').css("background-color","#24252a")
         $('.top-nav a').css("color","white")           
-        $('.top-nav a').css("border-bottom","2px solid #353535")    
+        $('.top-nav a').css("border-bottom","2px solid #353535")           
         $('.men-btn a').css("color","white")
         $('#active').css("border-bottom","2px solid white") 
     }
     wPosition = wScroll;
-});
+}
