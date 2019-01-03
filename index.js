@@ -10,10 +10,12 @@ class Category {
 Vue.component('product',{
     template:`
             <div>
-                <div class="search-container">
-                 <input v-model="search" class="search" type="text" placeholder="Enter brand name..."/>                             
-                </div>                
-                <div class="category" v-for="i in filteredList">
+                <div class="search-container">  
+                 <img src="flat.png"/> 
+                 <h2>I wanna search</h2>              
+                 <input v-model="search" class="search" type="text" placeholder="all"/>                                              
+                </div>                                
+                <div class="category" v-for="i in filteredList">                
                     <h2> {{ i.name }}</h2>            
                     <img :src="i.image">
                     <p>{{ i.description }}</p>
