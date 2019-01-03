@@ -151,6 +151,7 @@ p{
 .search-container
 {   
     text-align: center;
+    max-width: 700px;
     width: 100%;    
     height: 500px;    
     display: flex;
@@ -158,7 +159,7 @@ p{
     align-content: center;
     justify-content: center;
     align-items: center;    
-    padding: 20px;
+    
 }
 
 .search-container h2
@@ -180,7 +181,7 @@ p{
     border: none;
     border-bottom: 2px solid gray;
     padding: 20px 10px;    
-    max-width: 200px;
+    max-width: 150px;
     height: 30px;
     width: 100%;
     font-family: 'M PLUS 1p', sans-serif;  
