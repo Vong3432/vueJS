@@ -103,7 +103,7 @@ p{
 }
 
 .category img
-{
+{    
     max-width: 650px;
     width: 100%;
     min-height: 400px;
@@ -111,6 +111,7 @@ p{
     height: 100%;
     object-fit: contain;
 }
+
 
 .hero--content,.category
 {    
@@ -161,6 +162,7 @@ p{
     max-height: 100px;
     height: auto;
     object-fit: cover;
+    cursor: pointer;    
 }
 
 .category p

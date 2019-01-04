@@ -24,8 +24,8 @@ Vue.component('product',{
                 </span>
                 <hr class="divider" :class="{ noResultLine : filteredList.length === 0 }"/>
                 <div class="category" v-for="(list,index) in filteredList" :key="index">                
-                    <h2> {{ list.name }}</h2>            
-                    <img :src="list.image">
+                    <h2> {{ list.name }}</h2>                           
+                    <img :src="list.image">                             
                     <div class="lightbox-container">                       
                         <img @click="updateImage(index,clickedIndex)" v-for="(image,clickedIndex) in list.subImage" :src="image"/>
                     </div>
@@ -34,7 +34,7 @@ Vue.component('product',{
             </div>
     `,
     data() {
-        return {
+        return {            
             search:'',
             clickedObject:0,
             clickedIndex:0,            
@@ -66,8 +66,9 @@ Vue.component('product',{
     methods: {
         updateImage(index,clickedIndex){ 
             this.clickedObject = index           
-            this.clickedIndex = clickedIndex
-            this.categoryList[this.clickedObject].image = this.categoryList[this.clickedObject].subImage[this.clickedIndex]
+            this.clickedIndex = clickedIndex            
+            this.filteredList[this.clickedObject].image = this.filteredList[this.clickedObject].subImage[this.clickedIndex]
+            console.log("success")
         }
     },
     computed: {
@@ -75,11 +76,7 @@ Vue.component('product',{
             return this.categoryList.filter(i => {
                 return i.name.toLowerCase().includes(this.search.toLowerCase())
             })
-        },
-        // updatedImage(){
-        //         //return this.clickedIndex
-        //         return this.categoryList[clickedObject].image = this.categoryList[clickedObject].subImage[clickedIndex]
-        // }
+        }        
     }
 })
 
