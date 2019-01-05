@@ -41,7 +41,8 @@ Vue.component('casio-product',{
                 <img :src="item.image"/>
                 <h2>{{ item.name }}</h2>
                 <span class="price-tag">RM {{ item.price }}</span>
-                <p>{{ item.description }}</p>
+                <p>{{ item.description }}</p> 
+                <div style="width:100%;height:1px;background-color:silver"></div>                  
                 <button><i class="material-icons">favorite</i>Add to cart</button>
             </div>
         </section>
