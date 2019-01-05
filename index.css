@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|M+PLUS+1p|Roboto|Quicksand');
 *,::before,::after{
     margin: 0;
     padding: 0;
@@ -42,10 +42,11 @@ p{
     -ms-flex-flow: row wrap;        
     flex-flow: row wrap;
 
-    z-index: 99;
+    z-index: 97;
     box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.5); 
     
 }
+
 
 .top-nav a
 {
@@ -57,6 +58,16 @@ p{
     text-align: center;  
     font-family: 'M PLUS 1p', sans-serif;  
     border-bottom: 2px solid #353535;           
+}
+
+
+#openIcon
+{
+    cursor: pointer;
+    border-bottom: none;
+    padding: 20px;
+    color: rgba(72, 218, 138, 0.959);    
+    display: none;
 }
 
 .top-nav a:hover
@@ -106,8 +117,8 @@ p{
 {    
     max-width: 650px;
     width: 100%;
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 300px;
+    max-height: 300px;
     height: 100%;
     object-fit: contain;
 }
@@ -264,6 +275,159 @@ p{
     border-bottom:2px solid red;
 }
 
+/* Casio html */
+.sideBar
+{
+    animation: fadeIn 500ms ease-in-out;
+    animation-fill-mode: forwards;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 400px;
+    height: 100%;
+    box-shadow: 2px 0px 5px -2px grey;   
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.sideBar h2
+{
+    font-family: 'Crimson Text', serif;
+    margin-top: 30px;
+}
+
+.sideBar hr
+{
+    margin: 10px 0px;
+}
+
+.sideBar a
+{    
+    border-bottom: 1px solid white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;    
+}
+
+.sideBar a:hover
+{
+    border-bottom: 1px solid black;
+}
+
+.main-content
+{        
+    max-width: 100%;
+    width: auto;
+    position: relative;
+    margin-left: 300px;
+    margin-right: 50px;    
+    top: 100px;
+}
+
+.main-content .card-container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;    
+    max-width: 100%;
+    width: auto;
+    min-height: 100vh;    
+    height: 100%;
+    position: relative;
+}
+
+.card-container .card
+{
+    margin: 10px 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;    
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    min-height: 500px;
+    height: 100%;
+    box-shadow: 0px 0px 5px -1px grey;    
+}
+
+.card-container .card button
+{         
+    align-self: flex-end;  
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #2abb99;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.card i
+{
+    font-size: 0.9em;
+    padding: 0 5px;
+}
+
+.card button:hover
+{
+    cursor: pointer;
+    transform: rotate(360deg);
+    border: 1px solid black;
+    background-color: #fff;
+    color: red;
+}
+
+.icon
+{
+    cursor: pointer;    
+    padding-right: 10px;
+    position:absolute;
+    right:0;
+}
+
+.confirmedBuy
+{
+    border: 1px solid black;
+    background-color: #fff;
+    color: red;
+}
+
+.card-container .card h2
+{
+    font-size: 1.3em;
+    min-height: 50px;
+}
+
+.card-container .card .price-tag
+{
+    padding: 10px 0px;
+    color: green;
+}
+
+.card-container .card img
+{            
+    padding-bottom: 30px;
+    align-self: center;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+
 @media screen and (max-width:900px)
 {
     .page-container
@@ -284,5 +448,18 @@ p{
     .top-nav a:not(:first-child)
     {
         display: none;
+    }
+    .main-content
+    {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .sideBar
+    {
+        display: none;
+    }
+    #openIcon
+    {
+        display: block;
     }
 }

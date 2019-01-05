@@ -9,6 +9,82 @@ class Category {
     }
 }
 
+Vue.component('side-bar',{
+    template:`
+        <ul>
+            <i onclick="closeSide()" class="material-icons icon">close</i>            
+            <h2>Watches brand</h2>
+            <hr/>
+            <a href="casio.html">Casio</a>
+            <a href="#">Daniel Wellington</a>
+            <a href="#">Tissot</a>
+            
+            <h2>Men</h2>
+            <hr/>
+            <a href="casio.html">Casio</a>
+            <a href="#">Daniel Wellington</a>
+            <a href="#">Tissot</a>
+
+            <h2>Women</h2>
+            <hr/>
+            <a href="casio.html">Casio</a>
+            <a href="#">Daniel Wellington</a>
+            <a href="#">Tissot</a>
+        </ul>
+    `    
+})
+
+Vue.component('casio-product',{
+    template:`
+        <section class="card-container">
+            <div class="card" v-for="(item,index) in casio" :key="index">
+                <img :src="item.image"/>
+                <h2>{{ item.name }}</h2>
+                <span class="price-tag">RM {{ item.price }}</span>
+                <p>{{ item.description }}</p>
+                <button><i class="material-icons">favorite</i>Add to cart</button>
+            </div>
+        </section>
+    `,
+    data() {
+        return {            
+            casio:[
+                {
+                    name:'Casio MTP-1374D-1AVDF',
+                    image:'light-casio1.jpg',
+                    price: 699.00,
+                    description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+                },
+                {
+                    name:'Casio Edifice',
+                    image:'light-casio2.jpg',
+                    price: 1259.30,
+                    description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+                },
+                {
+                    name:'Casio EQB-501XD-1AER | EDIFICE',
+                    image:'light-casio3.jpg',
+                    price: 1399.00,
+                    description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+                },
+                {
+                    name:'Casio',
+                    image:'light-casio4.jpg',
+                    price: 899.50,
+                    description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+                },
+                {
+                    name:'Casio',
+                    image:'light-casio4.jpg',
+                    price: 899.50,
+                    description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+                }
+            ]
+        }
+    },
+
+})
+
 
 Vue.component('product',{
     template:`
@@ -96,6 +172,22 @@ var wPosition = 0;
 $(window).scroll(function(){
     changeNav();
 });
+
+function openSide()
+{
+    $('#openIcon').css("display","none")
+    $('.sideBar').css("display","flex")
+    $('.main-content').css("margin-left",300+"px")
+    $('.main-content').css("margin-right",50+"px")
+}
+
+function closeSide()
+{
+    $('#openIcon').css("display","block")
+    $('.sideBar').css("display","none")
+    $('.main-content').css("margin-left",0)
+    $('.main-content').css("margin-right",0)
+}
 
 function changeNav()
 {
