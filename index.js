@@ -1,10 +1,11 @@
 class Category {
-    constructor(id, name, image, description,subImage) {
+    constructor(id, name, image, description,subImage,link) {
       this.id = id;
       this.name = name;
       this.image = image;
       this.description = description;
       this.subImage = subImage;
+      this.link = link;
     }
 }
 
@@ -30,6 +31,9 @@ Vue.component('product',{
                         <img @click="updateImage(index,clickedIndex)" v-for="(image,clickedIndex) in list.subImage" :src="image"/>
                     </div>
                     <p style="position:relative;">{{ list.description }}</p>
+                    <a :href="list.link">
+                        <button class="category-button"> View more</button>
+                    </a>
                 </div>                
             </div>
     `,
@@ -44,21 +48,24 @@ Vue.component('product',{
                    'Casio',
                     'casio.jpg',
                     'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-                    ['casio.jpg','light-casio1.jpg','light-casio2.jpg','light-casio3.jpg','light-casio4.jpg']
+                    ['casio.jpg','light-casio1.jpg','light-casio2.jpg','light-casio3.jpg','light-casio4.jpg'],
+                    'casio.html'
                 ),
                 new Category(
                     0002,
                     'Daniel Wellington',
                     'dw.jpg',
                     'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-                    ['dw.jpg','light-dw1.jpg','light-dw2.jpg','light-dw3.jpg','light-dw4.jpg']
+                    ['dw.jpg','light-dw1.jpg','light-dw2.jpg','light-dw3.jpg','light-dw4.jpg'],
+                    'dw.html'
                 ),
                 new Category(
                     0003,
                     'Tissot',
                     'tissot.jpg',
                     'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-                    ['tissot.jpg','light-tissot1.png','light-tissot2.png','light-tissot3.jpg','light-tissot4.jpg']
+                    ['tissot.jpg','light-tissot1.png','light-tissot2.png','light-tissot3.jpg','light-tissot4.jpg'],
+                    'tissot.html'
                 )
             ]
         }
