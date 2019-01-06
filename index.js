@@ -43,46 +43,69 @@ Vue.component('casio-product',{
                 <span class="price-tag">RM {{ item.price }}</span>
                 <p>{{ item.description }}</p> 
                 <div style="width:100%;height:1px;background-color:silver"></div>                  
-                <button><i class="material-icons">favorite</i>Add to cart</button>
+                <button 
+                    @click="chgToAdded(index)"                                       
+                    class="cartBtn" 
+                    :class="[ item.status ? confirmedBuy : cartBtn]"
+                    >
+                    <i class="material-icons">favorite</i>
+                    Add to cart                    
+                </button>
             </div>
         </section>
     `,
     data() {
-        return {            
+        return {   
+            cartBtn:'cartBtn',
+            confirmedBuy:'confirmedBuy',                                   
             casio:[
                 {
+                    status:false,
                     name:'Casio MTP-1374D-1AVDF',
-                    image:'light-casio1.jpg',
+                    image:'light-casio1.jpg',                    
                     price: 699.00,
                     description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
                 },
                 {
+                    status:false,
                     name:'Casio Edifice',
-                    image:'light-casio2.jpg',
+                    image:'light-casio2.jpg',                    
                     price: 1259.30,
                     description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
                 },
                 {
+                    status:false,
                     name:'Casio EQB-501XD-1AER | EDIFICE',
-                    image:'light-casio3.jpg',
+                    image:'light-casio3.jpg',                    
                     price: 1399.00,
                     description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
                 },
                 {
+                    status:false,
                     name:'Casio',
-                    image:'light-casio4.jpg',
+                    image:'light-casio4.jpg',                    
                     price: 899.50,
                     description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
                 },
                 {
+                    status:false,
                     name:'Casio',
-                    image:'light-casio4.jpg',
+                    image:'light-casio4.jpg',                    
                     price: 899.50,
                     description:'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
                 }
             ]
         }
     },
+    methods:{
+       chgToAdded(index){          
+          this.casio[index].status = !this.casio[index].status
+          this.$emit('add-to-cart',this.casio[index].name,this.casio[index].price)
+       }
+    },
+    computed:{
+        
+    }
 
 })
 
@@ -165,7 +188,20 @@ Vue.component('product',{
 })
 
 var app = new Vue({
-    el:'#app'
+    el:'#app',
+    data:{
+        cart:[]
+    },
+    methods:{
+        updateCart(name,price)
+        {
+            if(!this.cart.includes(name))
+            this.cart.push(name)
+            
+            // console.log(price)
+            // console.log(name)
+        }
+    }
 })
 
 // JavaScript and Jquery
@@ -178,8 +214,8 @@ function openSide()
 {
     $('#openIcon').css("display","none")
     $('.sideBar').css("display","flex")
-    $('.main-content').css("margin-left",300+"px")
-    $('.main-content').css("margin-right",50+"px")
+    // $('.main-content').css("margin-left",300+"px")
+    // $('.main-content').css("margin-right",50+"px")
 }
 
 function closeSide()

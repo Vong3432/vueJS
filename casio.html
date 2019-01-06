@@ -21,7 +21,8 @@
 <div id="app">
     <side-bar class="sideBar"></side-bar>
     <section class="main-content">
-        <casio-product></casio-product>
+        <casio-product @add-to-cart="updateCart"></casio-product>
+        <p>{{ cart.length }}</p>
     </section>
 </div>
 
