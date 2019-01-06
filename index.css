@@ -116,12 +116,12 @@ p{
     width: 100%;
     min-height: 70vh;
     height: 100%; 
-    padding: 2vh;   
+    padding: 3vh;   
 }
 
 .separate-section
 {        
-    margin: 100px 0px;
+    padding: 30vh 0px;
     position: relative;    
     width: 100%;
     min-height: 40vh;
@@ -525,7 +525,7 @@ p{
 
     .separate-section
     {
-        margin: 300px 0px;
+        margin: 200px 0px;
     }
 
     .sideBar
