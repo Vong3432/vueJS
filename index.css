@@ -91,10 +91,8 @@ p{
     margin-right: 5%; */
 }
 
-.hero-container::before
+/* .hero-container::before
 {
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
     content: '';
     position: absolute;
     top: 0;
@@ -106,10 +104,14 @@ p{
     background-repeat: no-repeat;
     background-position:center;   
     z-index: -1; 
-}
+} */
 
 .hero-container
 {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;  
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
@@ -123,10 +125,10 @@ p{
 
 .separate-section
 {        
-    padding: 30vh 0px;
+    margin: 200px 0px;
     position: relative;    
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh;
     height: 100%;
     text-align: center;
 }
@@ -527,7 +529,7 @@ p{
 
     .separate-section
     {
-        margin: 200px 0px;
+        margin: 300px 0px;
     }
 
     .sideBar
