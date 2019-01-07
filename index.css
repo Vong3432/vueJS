@@ -135,6 +135,7 @@ p{
 
 .hero-advertisement h1
 {
+    text-align: center;
     border-bottom: 1px solid white;
     color: white;
     font-size: 4.5em;
@@ -620,9 +621,9 @@ p{
 
     .hero-advertisement h1
     {
-        font-size: 2.5em;
-        text-align: center;
+        font-size: 2.5em;        
     }
+    
     .hero-advertisement button
     {
         margin: 20px 0;
