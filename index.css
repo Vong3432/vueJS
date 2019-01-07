@@ -340,7 +340,8 @@ p{
 
 .search-container
 {   
-    z-index: -1;
+    text-align: center;
+    padding: 20px;    
     color: #fff;
     background-image: url('searchImage.jpg');
     background-position: center;
@@ -371,7 +372,7 @@ p{
 }
 
 .search
-{    
+{        
     color:#fff;
     background-color: transparent;
     text-align: center;
