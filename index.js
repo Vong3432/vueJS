@@ -112,9 +112,9 @@ Vue.component('casio-product',{
 
 Vue.component('product',{
     template:`
-            <div>
+            <div class="product-container">
                 <div class="search-container">  
-                 <img src="flat.png"/> 
+                 
                  <h2>I wanna search</h2>              
                  <input v-model="search" class="search" type="text" placeholder="all"/>                                                               
                 </div>                                
