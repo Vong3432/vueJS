@@ -113,7 +113,7 @@ Vue.component('casio-product',{
 Vue.component('product',{
     template:`
             <div class="product-container">
-                <div class="search-container">  
+                <div class="search-container" id="searchID">  
                  
                  <h2>I wanna search</h2>              
                  <input v-model="search" class="search" type="text" placeholder="all"/>                                                               
