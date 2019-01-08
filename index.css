@@ -243,7 +243,7 @@ p{
     background-color: #fff;
     padding: 10vh 5vh;    
     max-width: 700px;
-    max-height: 600px;
+    max-height: 700px;
     height: 100%;
     width: 100%;
     margin-top: 50vh;  
@@ -303,6 +303,11 @@ p{
     max-height: 100%;
     height: auto;
     
+}
+
+.category h2
+{
+    padding: 0 20px;
 }
 
 .category-button
@@ -460,6 +465,7 @@ p{
 }
 
 /* Casio html */
+
 .sideBar
 {
     animation: fadeIn 500ms ease-in-out;

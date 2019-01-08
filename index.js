@@ -9,6 +9,36 @@ class Category {
     }
 }
 
+Vue.component('hero',{
+    props:{
+        number: {
+            type:Number            
+        }
+    },
+    template:`    
+    <section v-if="number === 1" class="hero-container" style="background-image: url('heroimage.jpg');">
+        <div class="hero-advertisement">
+            <h1>Watches<span style="color:#19b5fe">.Co</span></h1>                   
+            <a href="#searchID"><button class="search-btn">Search</button></a>               
+            <button class="signup-btn">Sign up</button>  
+        </div>
+        <div class="hero--content">
+            <h1>History of Watches.Co</h1>
+            <hr/>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+    </section>   
+
+    <section v-else class="hero-container" style="background-image: url('secondhero.jpg');justify-content: flex-start;align-items: flex-start;">
+                <div class="hero--content" style="margin-right:0;margin-left:5%">
+                    <h1>' Watches ' makes you a man</h1>
+                    <hr/>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+    </section>   
+    `
+})
+
 Vue.component('side-bar',{
     template:`
         <ul>
@@ -213,7 +243,7 @@ $(window).scroll(function(){
 function openSide()
 {
     $('#openIcon').css("display","none")
-    $('.sideBar').css("display","flex")
+    $('.sideBar').css("display","flex")    
     // $('.main-content').css("margin-left",300+"px")
     // $('.main-content').css("margin-right",50+"px")
 }

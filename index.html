@@ -10,29 +10,21 @@
 </head>
 <body>
 
+    
 <ul class="top-nav">
-    <a href="#" id="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="#">About us</a>
     <a href="#">For him</a>
     <a href="#">For her</a>
+    <i class="material-icons" id="openIcon" onclick="openSide()">menu</i>
 </ul>
 
 <div id="app">
+    <side-bar class="sideBar"></side-bar>
     <div class="page-container">
-        <section class="hero-container" style="background-image: url('heroimage.jpg');">
-            <div class="hero-advertisement">
-                <h1>Watches<span style="color:#19b5fe">.Co</span></h1>                   
-                <a href="#searchID"><button class="search-btn">Search</button></a>               
-                <button class="signup-btn">Sign up</button>  
-            </div>
-            <div class="hero--content">
-                <h1>History of Watches.Co</h1>
-                <hr/>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            </div>
-        </section>   
+        <hero :number=1></hero>
         <section class="separate-section">
-                <video autoplay loop controls preload="none" poster="thumbnail.png">
+                <video controls preload="none" poster="thumbnail.png">
                     <source src="sky.mp4" type="video/mp4">
                 </video>
                 <div class="separate--content">
@@ -40,13 +32,8 @@
                     <p>We make, we provide.</p>
                 </div>
         </section>
-        <section class="hero-container" style="background-image: url('secondhero.jpg');justify-content: flex-start;align-items: flex-start;">
-                <div class="hero--content" style="margin-right:0;margin-left:5%">
-                    <h1>' Watches ' makes you a man</h1>
-                    <hr/>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </div>
-        </section>                                       
+        <hero :number=2></hero>
+        <!-- <second-hero></second-hero>                                 -->
         <product></product>                     
     </div>
 </div>
