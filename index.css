@@ -218,7 +218,7 @@ p{
                 -5px 0px 50px -50px rgba(0,0,0,0.1); */
     padding: 20px 40px;
     border-radius: 25px;
-    max-width: 500px;    
+    max-width: 600px;       
     width: 100%;
     margin: 0px;
     display: flex;
@@ -228,6 +228,7 @@ p{
     justify-items: center;
     align-items: center;
     align-content: center;
+    
 }
 
 .separate--content h3
