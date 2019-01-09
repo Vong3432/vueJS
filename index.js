@@ -20,20 +20,20 @@ Vue.component('hero',{
         <div class="hero-advertisement">
             <h1>Watches<span style="color:#19b5fe">.Co</span></h1>                   
             <a href="#searchID"><button class="search-btn">Search</button></a>               
-            <button class="signup-btn">Sign up</button>  
+            <button class="signup-btn">Sign up</button>              
         </div>
         <div class="hero--content">
             <h1>History of Watches.Co</h1>
             <hr/>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>Watches.Co is a website that collect a few brand of watches,price and the detail information. </p>
         </div>
     </section>   
 
     <section v-else class="hero-container" style="background-image: url('secondhero.jpg');justify-content: flex-start;align-items: flex-start;">
                 <div class="hero--content" style="margin-right:0;margin-left:5%">
-                    <h1>' Watches ' makes you a man</h1>
+                    <h1>Wear a watch, why ?</h1>
                     <hr/>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Simplicity, style, create relationship with time.</p>
                 </div>
     </section>   
     `
