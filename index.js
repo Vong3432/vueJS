@@ -16,9 +16,9 @@ Vue.component('hero',{
         }
     },
     template:`    
-    <section v-if="number === 1" class="hero-container" style="background-image: url('heroimage.jpg');">
+    <section v-if="number === 1" class="hero-container" style="background-image: url('testHero.jpg');">
         <div class="hero-advertisement">
-            <h1>Watches<span style="color:#19b5fe">.Co</span></h1>                   
+            <h1>Watches<span>.Co</span></h1>                   
             <a href="#searchID"><button class="search-btn">Search</button></a>               
             <button class="signup-btn">Sign up</button>              
         </div>

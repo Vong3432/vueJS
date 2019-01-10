@@ -110,8 +110,8 @@ p{
 
 .hero-container
 {
-    background-color: rgba(0,0,0,0.6);
-    background-blend-mode: overlay;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: screen;
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;  
@@ -130,7 +130,7 @@ p{
 .hero-advertisement
 {
     
-    margin-top: 300px;
+    margin-top: 350px;
     align-self: center;
     position: relative;    
 }
@@ -138,9 +138,9 @@ p{
 .hero-advertisement h1
 {
     text-align: center;
-    border-bottom: 1px solid white;
-    color: white;
-    font-size: 4.5em;
+    border-bottom: 2px solid rgba(38, 43, 67, 1);
+    color: rgba(38, 43, 67, 1);
+    font-size: 6.5em;
 }
 
 .hero-advertisement button
@@ -149,40 +149,36 @@ p{
     margin: 20px;
     width: 200px;
     height: 70px;
-    color: white;
-    font-size: 1.2em;
+    color: rgba(38, 43, 67, 1);
+    font-size: 1.3em;
     padding: 12px;
     border-radius: 50px;
 }
 
-.search-btn
-{    
-    border: 1px solid white;
-    background-color: transparent;    
+.hero-advertisement a
+{
+    text-decoration: none;
 }
 
-.search-btn:hover
-{
-    background-color: rgba(255, 255, 255, 1);
-    border: 1px solid black;
-    color: black;
+.search-btn
+{    
+    
+    border: 1px solid rgba(38, 43, 67, 1);
+    background-color: transparent;        
 }
 
 .signup-btn
 {
+    color: #fff !important;
     border:none;          
-    background-color: #19b5fe;
+    background-color: rgba(38, 43, 67, 1);
 }
 
-.signup-btn:hover
-{        
-    color: #e4f1fe;
-}
 
 .hero-advertisement button:hover
 {
-    box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.3),
-                -5px 0px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1),
+                -5px 0px 50px 0px rgba(0, 0, 0, 0.1);
     transform: scale(1.1);
 }
 
@@ -722,12 +718,12 @@ p{
 
     .hero-advertisement h1
     {
-        font-size: 2.5em;        
+        font-size: 3em;        
     }
     
     .hero-advertisement button
-    {
-        margin: 20px 0;
+    {                
+        margin: 20px 20px;
         display: block;
     }
     
