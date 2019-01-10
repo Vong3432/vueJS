@@ -45,7 +45,7 @@ Vue.component('side-bar',{
             <i onclick="closeSide()" class="material-icons icon">close</i>            
             <h2>Watches brand</h2>
             <hr/>
-            <a href="casio.html">Casio</a>
+            <a href="casio.html" id="tag-active" >Casio</a>
             <a href="#">Daniel Wellington</a>
             <a href="#">Tissot</a>
             

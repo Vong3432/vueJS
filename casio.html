@@ -24,6 +24,21 @@
         <casio-product @add-to-cart="updateCart"></casio-product>
         <p>{{ cart.length }}</p>
     </section>
+    <div class="preview-container">
+        <h3>Your cart</h3>
+        <table class="preview-table">
+        <tr>
+            <th colspan="1">Item name</th>            
+            <th colspan="1">Price</th>
+            <th colspan="1">Quantity</th>
+        </tr>
+        <tr>
+            <td>Casio MTP-1374D-1AVDF</td>              
+            <td>RM699</td>
+            <td>1</td>
+        </tr>
+        </table>
+    </div>
 </div>
 
 <script src="https://unpkg.com/vue"></script>

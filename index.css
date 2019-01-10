@@ -479,9 +479,11 @@ p{
     background-color: #fff;
     display: flex;
     flex-flow: column nowrap;
-    max-width: 400px;
+    max-width: 300px;
+    width: 100%;
     height: 100%;
-    box-shadow: 2px 0px 5px -2px grey;   
+    /* box-shadow: 2px 0px 5px -2px grey;    */
+    box-shadow: 5px 0px 50px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
     padding: 20px;
     top: 0;
@@ -498,6 +500,7 @@ p{
 
 .sideBar h2
 {
+    color: rgba(38, 43, 67, 1);;
     font-family: 'Crimson Text', serif;
     margin-top: 30px;
 }
@@ -508,18 +511,17 @@ p{
 }
 
 .sideBar a
-{    
-    border-bottom: 1px solid white;
+{        
     font-family: 'Quicksand', sans-serif;
     padding: 10px;
     color: black;
     text-decoration: none;
-    font-size: 1.2em;    
+    font-size: 0.9em;    
 }
 
-.sideBar a:hover
+.sideBar a:hover,#tag-active
 {
-    border-bottom: 1px solid black;
+    box-shadow: -5px 0 0 0 black;
 }
 
 .main-content
@@ -567,7 +569,7 @@ p{
     color: white;
     border: none;
     outline: none;
-    background-color: #2abb99;
+    background-color: rgba(38, 43, 67, 1);
     margin-top: 10px;
     padding: 15px;
 }
@@ -603,20 +605,25 @@ p{
 
 .card-container .card p
 {
+    color: #666876;
     padding-bottom: 10px;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .card-container .card h2
 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(38, 43, 67, 1);
     font-size: 1.3em;
     min-height: 50px;
 }
 
 .card-container .card .price-tag
 {
+    font-weight:bold;
+    font-size: 1.1em;
     padding: 10px 0px;
-    color: green;
+    color: rgb(7, 136, 7);
 }
 
 .card-container .card img
@@ -626,6 +633,47 @@ p{
     max-width: 200px;
     max-height: 200px;
     object-fit: contain;
+}
+
+.preview-container
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 400px;
+    width: 100%;
+    min-height: 50vh;    
+    background-color: #2F415A;  
+    color: #fff; 
+    border-radius: 25px 0px 15px 0px; 
+    padding: 25px;
+}
+
+.preview-container h3
+{    
+    border-bottom: 1px solid gray;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.preview-table
+{
+    padding: 5px 0px;
+    width:100%;
+    text-align:left;
+}
+
+.preview-table th
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px 0px;    
+    font-size: 1.3em;
+}
+
+.preview-table td
+{
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
